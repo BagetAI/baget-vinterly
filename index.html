@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinterly | Your Personal AI Palate Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --burgundy: #4E0110;
+            --cream: #F9F5F1;
+            --slate: #2D3436;
+            --rose: #B08968;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--slate);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-burgundy { background-color: var(--burgundy); }
+        .text-burgundy { color: var(--burgundy); }
+        .border-burgundy { border-color: var(--burgundy); }
+        .bg-cream { background-color: var(--cream); }
+        .accent-rose { color: var(--rose); }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="py-6 px-4 md:px-12 flex justify-between items-center border-b border-gray-200">
+        <div class="text-2xl font-bold text-burgundy tracking-tight">Vinterly</div>
+        <div>
+            <a href="#signup" class="bg-burgundy text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition">Join Beta</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <h1 class="text-5xl md:text-7xl leading-tight font-bold text-burgundy">
+                    The wine app that learns your palate.
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-xl">
+                    Vinterly is your personal AI sommelier. We don't just log what you drink—we map your taste journey and guide you to your next favorite bottle.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#signup" class="bg-burgundy text-white text-center px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition">
+                        Start Your Journey
+                    </a>
+                </div>
+                <div class="flex items-center gap-4 text-sm font-medium text-gray-500 uppercase tracking-widest">
+                    <span>Scan Labels</span>
+                    <span class="w-2 h-2 rounded-full bg-burgundy"></span>
+                    <span>AI Match Score</span>
+                    <span class="w-2 h-2 rounded-full bg-burgundy"></span>
+                    <span>Palate Mastery</span>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="images/premium-lifestyle-photography-of-a-perso.png" alt="Vinterly Palate Coach Interface" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl hidden lg:block border border-gray-100">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-burgundy rounded-full flex items-center justify-center text-white font-bold text-xl">94</div>
+                        <div>
+                            <p class="font-bold text-slate">Match Score</p>
+                            <p class="text-sm text-gray-500">Perfect Bridge Wine</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-12 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-burgundy mb-16">Master your taste in three steps.</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <div class="text-4xl font-bold text-burgundy opacity-20">01</div>
+                    <h3 class="text-2xl font-bold">Rate Your Glass</h3>
+                    <p class="text-gray-600">Scan any label. Tell us what you loved (or hated) about the acidity, tannins, and notes. Our AI learns with every sip.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-4xl font-bold text-burgundy opacity-20">02</div>
+                    <h3 class="text-2xl font-bold">Build Your Profile</h3>
+                    <p class="text-gray-600">We analyze your history to create a dynamic profile of your preferences—even the ones you haven't discovered yet.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-4xl font-bold text-burgundy opacity-20">03</div>
+                    <h3 class="text-2xl font-bold">Follow the Path</h3>
+                    <p class="text-gray-600">Get personalized "Bridge Wine" recommendations designed to nudge your palate forward from beginner to connoisseur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="signup" class="py-24 px-4 md:px-12 bg-burgundy text-white overflow-hidden relative">
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 italic">Ready to level up your wine game?</h2>
+            <p class="text-xl text-rose/80 mb-12">Join 500+ wine explorers in our private beta. No more guessing in the wine aisle.</p>
+            
+            <form id="beta-form" class="space-y-4 max-w-md mx-auto">
+                <input type="email" id="email" placeholder="Enter your email" required class="w-full px-6 py-4 rounded-lg text-slate bg-cream focus:outline-none focus:ring-2 focus:ring-rose transition">
+                <select id="knowledge" class="w-full px-6 py-4 rounded-lg text-slate bg-cream focus:outline-none focus:ring-2 focus:ring-rose transition">
+                    <option value="beginner">I'm a Wine Beginner</option>
+                    <option value="intermediate">I Know What I Like</option>
+                    <option value="advanced">I'm an Aspiring Connoisseur</option>
+                </select>
+                <button type="submit" class="w-full bg-slate text-white py-4 rounded-lg font-bold text-lg hover:bg-black transition flex items-center justify-center gap-2">
+                    <span id="btn-text">Get Early Access</span>
+                    <div id="loader" class="hidden animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
+                </button>
+                <p id="success-msg" class="hidden text-rose font-medium mt-4">Welcome to the journey! We'll be in touch soon.</p>
+                <p id="error-msg" class="hidden text-red-400 font-medium mt-4">Something went wrong. Please try again.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 px-4 md:px-12 text-center border-t border-gray-100 text-gray-400 text-sm">
+        <p>&copy; 2026 Vinterly. All rights reserved. Wine appreciation is a journey.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('beta-form');
+        const btnText = document.getElementById('btn-text');
+        const loader = document.getElementById('loader');
+        const successMsg = document.getElementById('success-msg');
+        const errorMsg = document.getElementById('error-msg');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            btnText.classList.add('hidden');
+            loader.classList.remove('hidden');
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+
+            const email = document.getElementById('email').value;
+            const knowledge = document.getElementById('knowledge').value;
+
+            try {
+                const response = await fetch('https://baget.ai/api/public/databases/417e701c-9d0f-44ff-903a-686d07fe4f5d/rows', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        data: {
+                            email: email,
+                            knowledge_level: knowledge,
+                            signup_date: new Date().toISOString().split('T')[0]
+                        }
+                    })
+                });
+
+                if (response.ok) {
+                    successMsg.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    errorMsg.classList.remove('hidden');
+                }
+            } catch (err) {
+                errorMsg.classList.remove('hidden');
+            } finally {
+                btnText.classList.remove('hidden');
+                loader.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
